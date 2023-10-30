@@ -1,5 +1,6 @@
 # metagenomics_ex
-using data from https://www.nature.com/articles/ncomms9945, subset of data = antibiotic changes to gut microbiome of mice
+using data from https://www.nature.com/articles/ncomms9945, 
+subset of data = antibiotic influence on gut microbiome of mice
 
 Streptomycin given to wildtype mouse subjects to see metagenomic changes in bacterial community using partial 16S shotgun sequencing
 
