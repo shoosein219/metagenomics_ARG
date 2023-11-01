@@ -1,4 +1,5 @@
 # metagenomics_ex
+### ** work in progress: last updated 01 Nov 2023
 - using single end reads (as a simple example) for AMR genes
 - data from https://www.nature.com/articles/ncomms9945, 
 subset of data = antibiotic influence on gut microbiome of mice (https://zenodo.org/records/1040361)
