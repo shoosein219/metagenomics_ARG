@@ -8,12 +8,13 @@ Streptomycin given to wildtype mouse subjects to see metagenomic changes in bact
 
 ### Step 1: Quality Control
 - Fastqc
-  
-  fastqc 16S_*.fastq 
+  ```bash
+  fastqc 16S_*.fastq
+  ```
 - Cutadapt (ie)
-  
+```bash  
 cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT -o output_16S*.fastq -u 10 -U 10 -q 20 --minimum-length 36 input_R1.fastq input_R2.fastq
-
+```
 - Fastqc (again) to check to ensure improved quality
 
 ### Step 2: Taxonomic profiling with Kraken2
@@ -23,6 +24,7 @@ Here, I use the Standard-8 version for simplicity. But, ideally for ARG, I would
 
 
 ### Step 3: Antimicrobial Resistance Gene Identification with MegaRes
+https://www.meglab.org/megares/download/ - zip file from v3.0.0 used
 
 ### Step 4:Metagenomic Assembly and Binning with MEGAHIT and MAGpy
 
