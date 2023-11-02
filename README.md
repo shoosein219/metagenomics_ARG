@@ -19,7 +19,7 @@ cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAG
 ### Step 2: Taxonomic profiling with Kraken2
 https://benlangmead.github.io/aws-indexes/k2
 
-Here, I use the Standard-8 version for simplicity. But, ideally for ARG, I would create a custom Kraken 2 database, integrating ARG annotations from databases like MegaRes or CARD (Comprehensive Antibiotic Resistance Database) for a more bioinformatically efficient pipeline, if taxonomic profiling is not a major concern.
+Here, I use the Standard-8 version for simplicity. But, ideally for ARG, I would create a custom Kraken 2 database, integrating ARG annotations from databases like MegaRes or CARD (Comprehensive Antibiotic Resistance Database) for a more bioinformatically efficient pipeline, if taxonomic profiling is not a major concern (ie) with synthetic communities where group member identity is known.
 
 
 ### Step 3: Antimicrobial Resistance Gene Identification with MegaRes
