@@ -1,4 +1,4 @@
-# metagenomics_ex
+# metagenomics_ARG
 ### ** work in progress: last updated 02 Nov 2023
 - using single end reads (as a simple example) for AMR genes
 - data from https://www.nature.com/articles/ncomms9945, 
@@ -18,11 +18,23 @@ cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAG
 - Fastqc (again) to check to ensure improved quality
 
 ### Step 2: Taxonomic profiling with Kraken2
+# using pre-compiled dbs found at:
 https://benlangmead.github.io/aws-indexes/k2
 
-Here, I use the Standard-8 version for simplicity. But, ideally for ARG, I would create a custom Kraken 2 database, integrating ARG annotations from databases like MegaRes or CARD (Comprehensive Antibiotic Resistance Database) for a more bioinformatically efficient pipeline, if taxonomic profiling is not a major concern (ie) with synthetic communities where group member identity is known.
+Here, I use an old version of minikraken2 for simplicity. But, ideally for ARG, I would create a custom Kraken 2 database, integrating ARG annotations from databases like MegaRes or CARD (Comprehensive Antibiotic Resistance Database) for a more bioinformatically efficient pipeline, if taxonomic profiling is not a major concern. 
 
+### Note installation tips for Kraken2 using MacOS
+./install_kraken2.sh installed_k2   
 
+You may run into errors that mention gcc, clang,  or -fopenmp. 
+To resolve this you have to change kraken2/src/Makefile's first line CXX=g++ to the version of g++ that you have (ie. CXX=g++-13), which can be found at usr/local/bin.
+
+## altering path by creating symb link
+
+Example:
+```bash
+ln -s /Users/ShabanaH/Desktop/github_repositories/03_metagenomic_ARG/kraken/kraken2/installed_k2/kraken2 /usr/local/bin/kraken2
+```
 ### Step 3: Antimicrobial Resistance Gene Identification with MegaRes
 https://www.meglab.org/megares/download/ - zip file from v3.0.0 used
 
