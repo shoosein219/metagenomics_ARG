@@ -1,9 +1,10 @@
 # metagenomics_ARG
 ### ** work in progress: last updated 02 Nov 2023
-- using single end reads (as a simple example) for AMR genes
+- using single end reads (as a simple example) for Antimicrobial resistant genes (ARG)
 - data from https://www.nature.com/articles/ncomms9945, 
 subset of data = antibiotic influence on gut microbiome of mice (https://zenodo.org/records/1040361)
 
+Description of dataset:
 Streptomycin given to wildtype mouse subjects to see metagenomic changes in bacterial community using partial 16S shotgun sequencing
 
 ### Step 1: Quality Control
