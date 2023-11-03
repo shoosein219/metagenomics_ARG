@@ -24,7 +24,9 @@ https://benlangmead.github.io/aws-indexes/k2
 Here, I use an old version of minikraken2 for simplicity. But, ideally for ARG, I would create a custom Kraken 2 database, integrating ARG annotations from databases like MegaRes or CARD (Comprehensive Antibiotic Resistance Database) for a more bioinformatically efficient pipeline, if taxonomic profiling is not a major concern. 
 
 ### Note installation tips for Kraken2 using MacOS
+```bash
 ./install_kraken2.sh installed_k2   
+```
 
 You may run into errors that mention gcc, clang,  or -fopenmp. 
 To resolve this you have to change kraken2/src/Makefile's first line CXX=g++ to the version of g++ that you have (ie. CXX=g++-13), which can be found at usr/local/bin.
