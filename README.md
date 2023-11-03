@@ -19,12 +19,8 @@ cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAG
 - Fastqc (again) to check to ensure improved quality
 
 ### Step 2: Taxonomic profiling with Kraken2
-# using pre-compiled dbs found at:
-https://benlangmead.github.io/aws-indexes/k2
 
-Here, I use an old version of minikraken2 for simplicity. But, ideally for ARG, I would create a custom Kraken 2 database, integrating ARG annotations from databases like MegaRes or CARD (Comprehensive Antibiotic Resistance Database) for a more bioinformatically efficient pipeline, if taxonomic profiling is not a major concern. 
-
-### Note installation tips for Kraken2 using MacOS
+#### Note installation tips for Kraken2 using MacOS
 ```bash
 ./install_kraken2.sh installed_k2   
 ```
@@ -38,6 +34,12 @@ Example:
 ```bash
 ln -s /Users/ShabanaH/Desktop/github_repositories/03_metagenomic_ARG/kraken/kraken2/installed_k2/kraken2 /usr/local/bin/kraken2
 ```
+#### using pre-compiled dbs found at:
+https://benlangmead.github.io/aws-indexes/k2
+
+Here, I use an old version of minikraken2 for simplicity. But, ideally for ARG, I would create a custom Kraken 2 database, integrating ARG annotations from databases like MegaRes or CARD (Comprehensive Antibiotic Resistance Database) for a more bioinformatically efficient pipeline, if taxonomic profiling is not a major concern. 
+
+
 ### Step 3: Antimicrobial Resistance Gene Identification with MegaRes
 https://www.meglab.org/megares/download/ - zip file from v3.0.0 used
 
