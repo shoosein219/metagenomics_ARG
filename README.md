@@ -7,7 +7,8 @@
 - **Description of dataset:**
 Streptomycin (treatment) given to wildtype mouse subjects to see metagenomic changes in bacterial community using partial 16S shotgun sequencing
 
-    - The data used in this example is from Barroso-Batista et al. 2015 published in *Nature Communications*  (https://www.nature.com/articles/ncomms9945). I use a subset of the data, based on my research questions (based on antimicrobial resistant genes(ARGs)) and select only the control and antibiotic-influenced treatment to see the effect of ARGs using libraries prepped for metagenomics that give insight into a study on the gut microbiome of mice with and without Streptomycin treatments (https://zenodo.org/records/1040361). Ultimately scraping the surface of HGT vs haploid-centric genetic recombination approaches, where the latter would be better parsed using genome-resolved transcriptomic data.
+    - The data used in this example is from Barroso-Batista et al. 2015 published in *Nature Communications*  (https://www.nature.com/articles/ncomms9945). I use a subset of the data, based on my research questions (based on antimicrobial resistant genes(ARGs)) and select only the control and antibiotic-influenced treatment to see the effect of ARGs using libraries prepped for metagenomics that give insight into a study on the gut microbiome of mice with and without Streptomycin treatments (https://zenodo.org/records/1040361).
+*Ultimately scraping the surface of HGT vs haploid-centric genetic recombination approaches, where the latter would be better parsed using genome-resolved transcriptomic data.*
     
     
     - Research **Q1**: Do the metagenomic profiles of the mouse gut microbiome show differences in the expression of Antimicrobial Resistant Genes (ARGs) in response to Streptomycin exposure? 
