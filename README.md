@@ -27,8 +27,9 @@ cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAG
 
 You may run into errors that mention gcc, clang,  or -fopenmp. 
 To resolve this you have to change kraken2/src/Makefile's first line CXX=g++ to the version of g++ that you have (ie. CXX=g++-13), which can be found at usr/local/bin.
+See my shell script in this repo for example.
 
-## altering path by creating symb link
+#### altering path by creating symb link
 
 Example:
 ```bash
@@ -38,6 +39,27 @@ ln -s /Users/ShabanaH/Desktop/github_repositories/03_metagenomic_ARG/kraken/krak
 https://benlangmead.github.io/aws-indexes/k2
 
 Here, I use an old version of minikraken2 for simplicity. But, ideally for ARG, I would create a custom Kraken 2 database, integrating ARG annotations from databases like MegaRes or CARD (Comprehensive Antibiotic Resistance Database) for a more bioinformatically efficient pipeline, if taxonomic profiling is not a major concern. 
+
+#### Classification
+You would want to run the following command on a loop. 
+```bash
+kraken2 --db $DBNAME seqs.fa
+```
+##### to create/edit shell script
+To be sure that my variables are consistantly defined, I wrote a shell script with a loop.
+
+Here are some basic commands for creating and running the script to loop through all samples.
+```bash
+# to create script
+touch run_classification_on_fastq.sh
+# to edit script
+nano run_classification_on_fastq.sh
+# edit permissions
+chmod +x run_classification_on_fastq.sh
+# to execute script
+./run_classification_on_fastq.sh
+```
+
 
 
 ### Step 3: Antimicrobial Resistance Gene Identification with MegaRes
