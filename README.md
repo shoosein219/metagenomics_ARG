@@ -1,6 +1,6 @@
 # metagenomics_ARG
 
-#### **A current project and work in progress: last updated 06 Nov 2023**
+### **A current project and work in progress: last updated 06 Nov 2023**
 
 - **Data Type:** using single end metagenomic data (as a simple example) to understand Antimicrobial Resistant Genes (ARGs) in gut microbiome
 
