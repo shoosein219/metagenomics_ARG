@@ -1,12 +1,12 @@
 # metagenomics_ARG
 ### ** a current project and work in progress: last updated 06 Nov 2023**
 
-- **Data Type:** using single end reads (as a simple example) for Antimicrobial resistant genes (ARG)
+- **Data Type:** using single end metagenomic data (as a simple example) to understand Antimicrobial Resistant Genes (ARGs) in gut microbiome
 
 - The data used in this example is from https://www.nature.com/articles/ncomms9945. I only use a subset of data, based on my research questions (based on antimicrobial resistant genes(ARGs)) and select only the controls and antibiotic-influenced treatment to see the effect of ARGs using libraries prepped for metagenomics that give insight into a study on the gut microbiome of mice with and without Streptomycin treatments (https://zenodo.org/records/1040361)
 
 **Description of dataset:**
-Streptomycin given to wildtype mouse subjects to see metagenomic changes in bacterial community using partial 16S shotgun sequencing
+Streptomycin (treatment) given to wildtype mouse subjects to see metagenomic changes in bacterial community using partial 16S shotgun sequencing
 
 ### Step 1: Quality Control
 - Fastqc
