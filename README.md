@@ -10,7 +10,7 @@ Streptomycin (treatment) given to wildtype mouse subjects to see metagenomic cha
     - The data used in this example is from Barroso-Batista et al. 2015 published in *Nature Communications*  (https://www.nature.com/articles/ncomms9945). I use a subset of the data, based on my research questions (based on antimicrobial resistant genes(ARGs)) and select only the control and antibiotic-influenced treatment to see the effect of ARGs using libraries prepped for metagenomics that give insight into a study on the gut microbiome of mice with and without Streptomycin treatments (https://zenodo.org/records/1040361)
     
     
-    - Research **Q1**: To what extent do the metagenomic profiles of the mouse gut microbiome show significant alterations in the expression of Antibiotic Resistance Genes (ARGs) in response to Streptomycin exposure? H1 = great extent; H0 = none/no difference
+    - Research **Q1**: Do the metagenomic profiles of the mouse gut microbiome show significant alterations in the expression of Antibiotic Resistance Genes (ARGs) in response to Streptomycin exposure? 
 
 
 ### Step 1: Quality Control
