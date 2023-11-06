@@ -1,10 +1,11 @@
 # metagenomics_ARG
-### ** work in progress: last updated 02 Nov 2023
-- using single end reads (as a simple example) for Antimicrobial resistant genes (ARG)
-- data from https://www.nature.com/articles/ncomms9945, 
-subset of data = antibiotic influence on gut microbiome of mice (https://zenodo.org/records/1040361)
+### ** a current project and work in progress: last updated 06 Nov 2023**
 
-Description of dataset:
+- **Data Type:** using single end reads (as a simple example) for Antimicrobial resistant genes (ARG)
+
+- The data used in this example is from https://www.nature.com/articles/ncomms9945. I only use a subset of data, based on my research questions (based on antimicrobial resistant genes(ARGs)) and select only the controls and antibiotic-influenced treatment to see the effect of ARGs using libraries prepped for metagenomics that give insight into a study on the gut microbiome of mice with and without Streptomycin treatments (https://zenodo.org/records/1040361)
+
+**Description of dataset:**
 Streptomycin given to wildtype mouse subjects to see metagenomic changes in bacterial community using partial 16S shotgun sequencing
 
 ### Step 1: Quality Control
@@ -20,25 +21,35 @@ cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAG
 
 ### Step 2: Taxonomic profiling with Kraken2
 
-#### Note installation tips for Kraken2 using MacOS
-```bash
-./install_kraken2.sh installed_k2   
-```
-
+#### (NOTE) Installation tips for Kraken2 using MacOS
 You may run into errors that mention gcc, clang,  or -fopenmp. 
 To resolve this you have to change kraken2/src/Makefile's first line CXX=g++ to the version of g++ that you have (ie. CXX=g++-13), which can be found at usr/local/bin.
-See my shell script in this repo for example.
+See my shell script in this repo for example. *will clean this up with a link to script in the future*
 
-#### altering path by creating symb link
 
-Example:
 ```bash
-ln -s /Users/ShabanaH/Desktop/github_repositories/03_metagenomic_ARG/kraken/kraken2/installed_k2/kraken2 /usr/local/bin/kraken2
+# run installation script
+./install_kraken2.sh installed_k2
+# alter executable path by creating symb link (as suggested after installation)
+ln -s /Users/ShabanaH/Desktop/github_repositories/03_metagenomic_ARG/kraken/kraken2/installed_k2/kraken2 /usr/local/bin/kraken2 
 ```
-#### using pre-compiled dbs found at:
+
+
+#### (NOTE) Using pre-compiled databases(dbs):
 https://benlangmead.github.io/aws-indexes/k2
 
-Here, I use an old version of minikraken2 for simplicity. But, ideally for ARG, I would create a custom Kraken 2 database, integrating ARG annotations from databases like MegaRes or CARD (Comprehensive Antibiotic Resistance Database) for a more bioinformatically efficient pipeline, if taxonomic profiling is not a major concern. 
+- Here, I use an old version of minikraken2 for simplicity (for a low-storage space solution if running locally).
+  
+- By using a pre-compiled version, I am saving my computer ~ 100 GB of available computational power needed to be free for compiling the db. So, to save myself the distress of transferring most my files to icloud or other cloud-based services just to compile the db, I am using the pre-compiled version.
+  
+- If I wanted to compile my own db because I was working on a server or HPC, I would do the following to compile a **standard** kraken db:
+
+```bash
+# Build kraken database 
+kraken2-build --standard --db my_new_database
+```
+
+- Ideally for ARG, I would create a custom Kraken 2 database, integrating ARG annotations from databases like MegaRes or CARD (Comprehensive Antibiotic Resistance Database) for a more bioinformatically efficient pipeline, if taxonomic profiling is not a major concern. I hope to have example code for this in the future if I gain access to an HPC-cluster.
 
 #### Classification
 You would want to run the following command on a loop. 
@@ -46,9 +57,9 @@ You would want to run the following command on a loop.
 kraken2 --db $DBNAME seqs.fa
 ```
 ##### to create/edit shell script
-To be sure that my variables are consistantly defined, I wrote a shell script with a loop.
+To be sure that my variables are consistantly defined, I wrote a shell script with a loop (see run_classification_on_fastq.sh in this repo) *will clean this up with a link to script in the future*
 
-Here are some basic commands for creating and running the script to loop through all samples.
+Here are some basic commands for creating and running the script to loop through all samples:
 ```bash
 # to create script
 touch run_classification_on_fastq.sh
@@ -59,8 +70,6 @@ chmod +x run_classification_on_fastq.sh
 # to execute script
 ./run_classification_on_fastq.sh
 ```
-
-
 
 ### Step 3: Antimicrobial Resistance Gene Identification with MegaRes
 https://www.meglab.org/megares/download/ - zip file from v3.0.0 used
