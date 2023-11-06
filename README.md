@@ -2,15 +2,15 @@
 
 ### **A current project and work in progress: last updated 06 Nov 2023**
 
-- **Data Type:** using single end metagenomic data (as a simple example) to understand Antimicrobial Resistant Genes (ARGs) in gut microbiome
+- **Data Type:** using single end metagenomic data (as a simple example) to understand Antimicrobial Resistant Genes (ARGs, also known as AMR genes) in gut microbiome
 
 - **Description of dataset:**
 Streptomycin (treatment) given to wildtype mouse subjects to see metagenomic changes in bacterial community using partial 16S shotgun sequencing
 
-    - The data used in this example is from Barroso-Batista et al. 2015 published in *Nature Communications*  (https://www.nature.com/articles/ncomms9945). I use a subset of the data, based on my research questions (based on antimicrobial resistant genes(ARGs)) and select only the control and antibiotic-influenced treatment to see the effect of ARGs using libraries prepped for metagenomics that give insight into a study on the gut microbiome of mice with and without Streptomycin treatments (https://zenodo.org/records/1040361)
+    - The data used in this example is from Barroso-Batista et al. 2015 published in *Nature Communications*  (https://www.nature.com/articles/ncomms9945). I use a subset of the data, based on my research questions (based on antimicrobial resistant genes(ARGs)) and select only the control and antibiotic-influenced treatment to see the effect of ARGs using libraries prepped for metagenomics that give insight into a study on the gut microbiome of mice with and without Streptomycin treatments (https://zenodo.org/records/1040361). Ultimately scraping the surface of HGT vs haploid-centric genetic recombination approaches, where the latter would be better parsed using genome-resolved transcriptomic data.
     
     
-    - Research **Q1**: Do the metagenomic profiles of the mouse gut microbiome show significant alterations in the expression of Antibiotic Resistance Genes (ARGs) in response to Streptomycin exposure? 
+    - Research **Q1**: Do the metagenomic profiles of the mouse gut microbiome show differences in the expression of Antimicrobial Resistant Genes (ARGs) in response to Streptomycin exposure? 
 
 
 ### Step 1: Quality Control
