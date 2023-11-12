@@ -88,9 +88,9 @@ chmod +x run_classification_on_fastq.sh
 ### Step 3: Antimicrobial Resistance Gene Identification with MegaRes
 https://www.meglab.org/megares/download/ - zip file from v3.0.0 used
 
-### Step 4:Metagenomic Assembly and Binning with MEGAHIT and MAGpy
+~~### Step 4:Metagenomic Assembly and Binning with MEGAHIT and MAGpy~~
 
-### Step 5: Taxonomic Profiling of MAGs with Kraken2 Database
+### Step 4: Taxonomic Profiling of MAGs with Kraken2 Database
 
-### Step 6: Data Analysis and Viz
+### Step 5: Data Analysis and Viz
 
