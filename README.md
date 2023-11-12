@@ -8,11 +8,18 @@
 Streptomycin (treatment) given to wildtype mouse subjects to see metagenomic changes in bacterial community using partial 16S shotgun sequencing
 
     - The data used in this example is from Barroso-Batista et al. 2015 published in *Nature Communications*  (https://www.nature.com/articles/ncomms9945). I use a subset of the data, based on my research questions (based on antimicrobial resistant genes(ARGs)) and select only the control and antibiotic-influenced treatment to see the effect of ARGs using libraries prepped for metagenomics that give insight into a study on the gut microbiome of mice with and without Streptomycin treatments (https://zenodo.org/records/1040361).
-*Ultimately scraping the surface of HGT vs haploid-centric genetic recombination approaches, where the latter would be better parsed using genome-resolved transcriptomic data and bioinformatically analysed using different AMR gene databases (ie. dbs exclusively for AMR gene point-mutations).*
+*Ultimately scraping the surface of HGT vs haploid-centric genetic recombination approaches, where the latter would be better parsed using genome-resolved transcriptomic data. Bioinformatically, conserved bacterial genes that mutate to become AMR genes are analysed using different AMR gene databases (ie. dbs exclusively for AMR gene point-mutations).*
   
 - **Description of Methods**:In surveying ARGs, there are two general bioinformatic methods that can be used once sequencing is performed: (1) read-based metagenomics and mapping against ARG databases (2) genome-resolved metagenomics and comparison to functional annotation databases. In this example, I will use the first method mentioned.
+  
+- **Statement about choosing an AMR gene db**: Depending on the features and functionality that you are looking     to understand based on your research questions, it is important to choose an AMR gene db for the purpose of your designed study. For more information, there is a very nice review by Xavier et al. that discusses the advantages and disadvantages of each AMR gene db and the features and functionalities behind choosing one versus the other: Xavier et al., 2016. Consolidating and exploring antibiotic resistance gene data resources. J Clin Microbiol, 54, 851–859. 
+https://doi.org/10.1128/JCM.02717-15
+
+
+### Example Study:
      
-    - Research **Q1**: Do the metagenomic profiles of the mouse gut microbiome show differences in the expression of Antimicrobial Resistant Genes (ARGs) in response to Streptomycin exposure? 
+### Research Q: 
+Do the metagenomic profiles of the mouse gut microbiome show differences in the expression of Antimicrobial Resistant Genes (ARGs) in response to Streptomycin exposure? 
 
 
 ### Step 1: Quality Control
