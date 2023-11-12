@@ -89,6 +89,7 @@ chmod +x run_classification_on_fastq.sh
 https://www.meglab.org/megares/download/ - zip file from v3.0.0 used
 
 ~~### Step 4:Metagenomic Assembly and Binning with MEGAHIT and MAGpy~~
+**note** assembly and binning mostly used for metagenomic analyses aimed to discover new taxa and is more qualitatively rich as a bioinformatic analysis than quantitatively
 
 ### Step 4: Taxonomic Profiling of MAGs with Kraken2 Database
 
