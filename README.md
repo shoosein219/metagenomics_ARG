@@ -1,6 +1,6 @@
 # metagenomics_ARG
 
-### **A current project and work in progress: last updated 06 Nov 2023**
+### **A current project and work in progress: last updated 12 Nov 2023**
 
 - **Data Type:** using single end metagenomic data (as a simple example) to understand Antimicrobial Resistant Genes (ARGs, also known as AMR genes) in gut microbiome
 
@@ -8,7 +8,7 @@
 Streptomycin (treatment) given to wildtype mouse subjects to see metagenomic changes in bacterial community using partial 16S shotgun sequencing
 
     - The data used in this example is from Barroso-Batista et al. 2015 published in *Nature Communications*  (https://www.nature.com/articles/ncomms9945). I use a subset of the data, based on my research questions (based on antimicrobial resistant genes(ARGs)) and select only the control and antibiotic-influenced treatment to see the effect of ARGs using libraries prepped for metagenomics that give insight into a study on the gut microbiome of mice with and without Streptomycin treatments (https://zenodo.org/records/1040361).
-*Ultimately scraping the surface of HGT vs haploid-centric genetic recombination approaches, where the latter would be better parsed using genome-resolved transcriptomic data.*
+*Ultimately scraping the surface of HGT vs haploid-centric genetic recombination approaches, where the latter would be better parsed using genome-resolved transcriptomic data and bioinformatically analysed using different AMR gene databases (ie. dbs exclusively for AMR gene point-mutations).*
   
 - **Description of Methods**:In surveying ARGs, there are two general bioinformatic methods that can be used once sequencing is performed: (1) read-based metagenomics and mapping against ARG databases (2) genome-resolved metagenomics and comparison to functional annotation databases. In this example, I will use the first method mentioned.
      
