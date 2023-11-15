@@ -54,8 +54,6 @@ https://benlangmead.github.io/aws-indexes/k2
 
 - Here, I use an old version of minikraken2 for simplicity (for a low-storage space solution if running locally).
   
-- By using a pre-compiled version, I am saving my computer ~ 100 GB of available computational power needed to be free for compiling the db. So, to save myself the distress of transferring most my files to icloud or other cloud-based services just to compile the db, I am using the pre-compiled version.
-  
 - If I wanted to compile my own db because I was working on a server or HPC, I would do the following to compile a **standard** kraken db:
 
 ```bash
